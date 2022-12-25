@@ -23,9 +23,11 @@ export const UserInfo = styled.div`
     display: flex;
     flex-direction: row;
     margin-bottom: 12px;
+    
     div {
         margin-left: 12px;
     }
+
     h4{
         font-family: 'Open Sans';
         font-style: normal;
@@ -34,6 +36,7 @@ export const UserInfo = styled.div`
         line-height: 25px;
         color: #FFFFFF;
     }
+
     p {
         font-family: 'Open Sans';
         font-style: normal;

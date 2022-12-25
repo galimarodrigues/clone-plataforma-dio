@@ -1,9 +1,7 @@
 import React from 'react'
 import { Card } from '../../components/Card';
 import { UserInfo } from '../../components/UserInfo';
-
 import { Header } from '../../components/Header';
-
 import { Container, Column, Title, TitleHighlight } from './styles';
 
 const Feed = () => {
@@ -25,11 +23,12 @@ const Feed = () => {
                 <Card />
             </Column>
             <Column flex={1}>
-              <TitleHighlight> # RANKING 5 TOP DA SEMANA </TitleHighlight>
-                <UserInfo nome="Pablo Henrique" image="https://avatars.githubusercontent.com/u/45184516?v=" percentual={25}/>
-                <UserInfo nome="Pablo Henrique" image="https://avatars.githubusercontent.com/u/45184516?v=" percentual={65}/>
-                <UserInfo nome="Pablo Henrique" image="https://avatars.githubusercontent.com/u/45184516?v=" percentual={45}/>
-                <UserInfo nome="Pablo Henrique" image="https://avatars.githubusercontent.com/u/45184516?v=" percentual={72}/>
+              <TitleHighlight> # RANKING TOP 5 DA SEMANA </TitleHighlight>
+                <UserInfo nome="Gabriel Lima" image="https://avatars.githubusercontent.com/u/117487712?v=4" percentual={25}/>
+                <UserInfo nome="Gabriel Lima" image="https://avatars.githubusercontent.com/u/117487712?v=4" percentual={65}/>
+                <UserInfo nome="Gabriel Lima" image="https://avatars.githubusercontent.com/u/117487712?v=4" percentual={45}/>
+                <UserInfo nome="Gabriel Lima" image="https://avatars.githubusercontent.com/u/117487712?v=4" percentual={83}/>
+                <UserInfo nome="Gabriel Lima" image="https://avatars.githubusercontent.com/u/117487712?v=4" percentual={32}/>
             </Column>
         </Container>
     </>

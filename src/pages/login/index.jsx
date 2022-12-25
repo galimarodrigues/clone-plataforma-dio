@@ -30,7 +30,7 @@ const Login = () => {
 
     //         alert('Usuário ou senha inválido')
     //     }catch(e){
-
+                //TODO: HOUVE UM ERRO
     //     }
     // };
 
@@ -48,9 +48,9 @@ const Login = () => {
                 <TitleLogin>Faça seu cadastro</TitleLogin>
                 <SubtitleLogin>Faça seu login e make the change._</SubtitleLogin>
                 <form onSubmit={handleSubmit()}>
-                    <Input placeholder="E-mail" leftIcon={<MdEmail />} name="email"  control={control} />
+                    <Input placeholder="E-mail" leftIcon={<MdEmail />} name="email" control={control} />
                     {errors.email && <span>E-mail é obrigatório</span>}
-                    <Input type="password" placeholder="Senha" leftIcon={<MdLock />}  name="senha" control={control} />
+                    <Input type="password" placeholder="Senha" leftIcon={<MdLock />} name="senha" control={control} />
                     {errors.senha && <span>Senha é obrigatório</span>}
                     <Button title="Entrar" variant="secondary" type="submit"/>
                 </form>
