@@ -1,11 +1,12 @@
 import React from 'react'
 import logo from '../../assets/logo-dio.png';
-
+import { IHeader } from './types';
 import { Button } from '../Button';
 
 import { Container, Wrapper, BuscarInputContainer, Input, Row, Menu, MenuRight, UserPicture} from './styles';
 
-const Header = ({autenticado}) => {
+
+const Header = ({autenticado}: IHeader) => {
   return (
     <Wrapper>
       <Container>
