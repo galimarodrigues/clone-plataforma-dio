@@ -12,7 +12,7 @@ export const Container = styled.main`
 `
 
 export const Wrapper = styled.div`
-    max-width: 300px;
+    max-width: 330px;
 `
 
 export const Column = styled.div`
@@ -22,9 +22,7 @@ export const Column = styled.div`
 export const Row = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
 `
 
 export const Title = styled.h2`
@@ -39,6 +37,8 @@ export const Title = styled.h2`
 `
 
 export const TitleLogin = styled.p`
+    display: flex;
+    align-items: center;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
@@ -56,12 +56,23 @@ export const SubtitleLogin = styled.p`
     margin-bottom: 35px;
 `
 
-export const EsqueciText  = styled.p`
+export const TermosDeUso  = styled.p`
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
-    color: #E5E044;
+    color: #FFF;
     margin-top: 20px;
 ` 
+export const TenhoConta  = styled.p`
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFF;
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 15px;
+`

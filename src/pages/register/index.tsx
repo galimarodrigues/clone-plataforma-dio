@@ -1,30 +1,31 @@
-import { useNavigate } from "react-router-dom";
 import { MdEmail, MdLock } from 'react-icons/md';
+import { useNavigate } from "react-router-dom";
 
 import { ButtonRegister } from '../../components/ButtonRegister';
 import { Button } from '../../components/Button';
 import { Header } from '../../components/Header';
 import { Input } from '../../components/Input';
 
+import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from "react-hook-form";
-import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from "yup";
 
 import { api } from '../../services/api';
 import { IFormData } from "./types";
 
-import { Container, Title, Column, TitleLogin, SubtitleLogin, EsqueciText, Row, Wrapper } from './styles';
+import { Column, Container, Row, SubtitleLogin, TermosDeUso, Title, TitleLogin, Wrapper, TenhoConta } from './styles';
+
 
 const schema = yup.object({
     email: yup.string().email('Email não é valido').required('Campo obrigatório'),
     password: yup.string().min(3, 'No mínimo 3 caracteres').required('Campo obrigatório'),
 }).required();
 
-const Login = () => {
+const Register = () => {
     const navigate = useNavigate();
 
     const handleClickSignIn = () => {
-        navigate('/register')
+        navigate('/Login')
     }
 
     const {control, handleSubmit, formState: { errors } } = useForm<IFormData>({
@@ -54,16 +55,20 @@ const Login = () => {
             </Column>
             <Column>
                 <Wrapper>
-                <TitleLogin>Faça seu cadastro</TitleLogin>
-                <SubtitleLogin>Faça seu login e make the change._</SubtitleLogin>
+                <TitleLogin>Comece agora grátis</TitleLogin>
+                <SubtitleLogin>Crie sua conta e make the change._</SubtitleLogin>
                 <form onSubmit={handleSubmit(onSubmit)}>
+                    <Input name="nome" errorMessage={errors?.nome?.message} placeholder="Nome Completo" leftIcon={<MdEmail />} control={control} />
                     <Input name="email" errorMessage={errors?.email?.message} placeholder="E-mail" leftIcon={<MdEmail />} control={control} />
                     <Input name="password" placeholder="Senha" type="password" errorMessage={errors?.password?.message} leftIcon={<MdLock />}  control={control} />
-                    <Button title="Entrar" variant="secondary" type="submit" />
+                    <Button title="Criar minha conta" variant="secondary" type="submit" />
                 </form>
+                <TermosDeUso>Ao clicar em "Criar minha conta", declaro que aceito as Políticas de Privacidade
+                        e os Termos de Uso da DIO.
+                </TermosDeUso>
                 <Row>
-                    <EsqueciText>Esqueci minha senha</EsqueciText>
-                    <ButtonRegister title="Criar Conta" variant="secondary" onClick={handleClickSignIn} />
+                    <TenhoConta>Já tenho conta.</TenhoConta>
+                    <ButtonRegister title="Fazer login" variant="secondary" onClick={handleClickSignIn} />
                 </Row>
                 </Wrapper>
             </Column>
@@ -71,4 +76,4 @@ const Login = () => {
     </>)
 }
 
-export { Login }
+export { Register };
