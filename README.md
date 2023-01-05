@@ -14,6 +14,10 @@ O projeto foi desenvolvido utilizando React App, realizado em JavaScript e poste
 ![tela login](https://user-images.githubusercontent.com/117487712/209672546-f483e60f-b573-403f-80d7-d194be9fa470.PNG)
 
 ---
+### Register
+![Capture](https://user-images.githubusercontent.com/117487712/210815084-d014328c-3732-46d5-a131-cec334e415ed.JPG)
+
+---
 ### Feed
 ![tela feed](https://user-images.githubusercontent.com/117487712/209672564-5d3d5e79-1b91-40f5-a0f7-a247fe7e74d8.PNG)
 
